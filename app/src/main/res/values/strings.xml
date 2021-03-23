@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">wanandroid</string>
+    <string name="home_page">"首页"</string>
+    <string name="progect_page">"项目"</string>
+    <string name="square_page">"广场"</string>
+    <string name="public_page">"公众号"</string>
+    <string name="minec_page">"我的"</string>
 </resources>
