@@ -2,6 +2,7 @@ package com.rj.wanandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.Navigation
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         var _binding:ActivityMainBinding?=null
     private val mTabAdapter = SettingTabAdapter(_tabData).apply {
         setOnSelectListener { navigation_id ->
+            Log.i(TAG, ": ${navigation_id}")
             navController.navigate(navigation_id)
         }
     }
@@ -38,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         }
         navController = Navigation.findNavController(this,
             R.id.nav_host_fragment) as NavHostController
-
-
+    }
+    companion object{
+        val TAG="MainActivity"
     }
 }
